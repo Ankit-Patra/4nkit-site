@@ -1,31 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>4nkit.dev</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #050816;
-      color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    h1 { margin-bottom: 0.5rem; }
-    p { opacity: 0.8; }
-    a { color: #4fd1c5; text-decoration: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4nkit.dev // TERMINAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>4nkit.dev</h1>
-  <p>Sample page is live 🚀</p>
-  <p>More projects coming soon...</p>
-  <p>
-    <a href="https://github.com/Ankit-Patra" target="_blank">GitHub</a> ·
-    <a href="https://linkedin.com/in/ankitpatra123" target="_blank">LinkedIn</a>
-  </p>
+
+    <div id="boot-screen" class="boot-overlay">
+        <div class="boot-text" id="boot-text"></div>
+    </div>
+
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <nav class="terminal-nav hidden-initially">
+        <div class="brand">4nkit@dev:~$ <span class="blink-cursor">_</span></div>
+        <div class="mobile-toggle" id="mobile-toggle">[ MENU ]</div>
+        <ul id="nav-list">
+            <li><a href="#home" class="nav-link">./Home</a></li>
+            <li><a href="#about" class="nav-link">./About</a></li>
+            <li><a href="#skills" class="nav-link">./Skills</a></li>
+            <li><a href="#education" class="nav-link">./Education</a></li>
+            <li><a href="#experience" class="nav-link">./Experience</a></li>
+            <li><a href="#projects" class="nav-link">./Projects</a></li>
+            <li><a href="#contact" class="nav-link">./Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="hidden-initially">
+        
+        <section id="home" class="hero-section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="title">/bin/bash --login</span>
+                </div>
+                <div class="terminal-body large-text">
+                    <div class="typewriter-area">
+                        <p id="line1" class="console-line"></p>
+                        <h1 id="line2" class="console-line highlight"></h1>
+                        <span class="cursor-block">█</span>
+                    </div>
+                    <div id="hero-actions" class="hero-actions hidden">
+                        <br>
+                        <p class="comment">// Select execution path:</p>
+                        <div class="btn-group">
+                            <a href="#projects" class="terminal-btn">[ cd ./projects ]</a>
+                            <a href="#contact" class="terminal-btn outline">[ ./contact_me ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> whoami</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="terminal-card profile-card">
+                    <div class="ascii-art">
+   .----------------.
+   | >_ root@4nkit  |
+   |                |
+   |   SYSTEM RDY   |
+   |   [||||||||]   |
+   |                |
+   '----------------'
+   |______|
+   [  =============  ]
+                    </div>
+                    <div class="profile-stats">
+                        <p>USER: <span class="highlight-white">4nkit</span></p>
+                        <p>CLASS: <span class="highlight-white">Full Stack Dev</span></p>
+                        <p>UPTIME: <span class="highlight-white">99.9%</span></p>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <p>System Status: <span class="neon-text">OPERATIONAL</span></p>
+                    <br>
+                    <p>I am a software engineer focused on <span class="highlight-white">backend architecture</span> and scalable systems. I prefer clean code over complex abstractions and terminal commands over GUIs.</p>
+                    <br>
+                    <p>Current Objective: Building robust tools that automate the boring stuff.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> ./check_modules.py</h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>// 01_CORE_SYSTEMS</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">C / C++</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Git</div>
+                        <div class="skill-item">SQL</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>// 02_BACKEND_INFRA</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Django</div>
+                        <div class="skill-item">Flask</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Express</div>
+                        <div class="skill-item">SpringBoot</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>// 03_FRONTEND_UI</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">HTML5 / CSS3</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">React.js</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> cat /var/log/education</h2>
+            </div>
+            <div class="log-entry">
+                <div class="log-header">
+                    <span class="timestamp">[2021-2025]</span>
+                    <span class="status-code success">STATUS: COMPLETED</span>
+                </div>
+                <div class="log-body">
+                    <h3 class="highlight-white">SRM Institute of Science and Technology</h3>
+                    <p>> B.Tech in Computer Science and Engineering</p>
+                    <p>> Final Score (CGPA): <span class="neon-text">9.13 / 10.0</span></p>
+                    <p class="comment">// Graduation successful. Ready for deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> git log --graph --oneline</h2>
+            </div>
+            
+            <div class="git-graph">
+                <div class="git-commit">
+                    <div class="commit-marker"></div>
+                    <div class="commit-content">
+                        <div class="commit-meta">
+                            <span class="hash">#8f3a2c</span>
+                            <span class="time">Current</span>
+                        </div>
+                        <h3 class="highlight-white">TCS (Tata Consultancy Services)</h3>
+                        <p class="role">Role: Assistant System Engineer</p>
+                        <ul class="changelog">
+                            <li>+ Integrated Python/Django middleware for internal tools.</li>
+                            <li>+ Automated ETQ API data fetching workflows.</li>
+                            <li>+ Optimized SQL queries reducing load times by 40%.</li>
+                            <li>+ Collaborated in Agile/Scrum environment.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="git-line"></div>
+                <div class="git-commit">
+                    <div class="commit-marker start"></div>
+                    <div class="commit-content">
+                        <span class="hash">#init00</span>
+                        <span class="comment">// Career initialized...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> ls -l ~/projects/</h2>
+            </div>
+            
+            <div class="single-column-projects">
+                
+                <div class="terminal-row">
+                    <div class="cmd-line">
+                        <span class="prompt-user">4nkit@dev:~/projects/text_editor $</span>
+                        <span class="cmd">cat README.md</span>
+                    </div>
+                    <div class="cmd-output">
+                        <h3 class="highlight-white">Text Editor in C</h3>
+                        <p>A lightweight, terminal-based text editor built from scratch using raw mode input processing.</p>
+                        <div class="tech-stack-inline">
+                            [ C ] [ Make ] [ Unix APIs ]
+                        </div>
+                        <br>
+                        <a href="#" class="file-link">> view_source_code</a>
+                    </div>
+                </div>
+
+                <div class="terminal-row">
+                    <div class="cmd-line">
+                        <span class="prompt-user">4nkit@dev:~/projects/django_app $</span>
+                        <span class="cmd">cat description.txt</span>
+                    </div>
+                    <div class="cmd-output">
+                        <h3 class="highlight-white">Django Web App</h3>
+                        <p>Scalable web application featuring custom user authentication and PostgreSQL integration.</p>
+                        <div class="tech-stack-inline">
+                            [ Django ] [ Python ] [ SQL ]
+                        </div>
+                        <br>
+                        <a href="#" class="file-link">> view_source_code</a>
+                    </div>
+                </div>
+
+                <div class="terminal-row">
+                    <div class="cmd-line">
+                        <span class="prompt-user">4nkit@dev:~/projects/react_dashboard $</span>
+                        <span class="cmd">npm start</span>
+                    </div>
+                    <div class="cmd-output">
+                        <h3 class="highlight-white">React Dashboard</h3>
+                        <p>Interactive dashboard visualizing real-time data with responsive components.</p>
+                        <div class="tech-stack-inline">
+                            [ React ] [ Node ] [ Chart.js ]
+                        </div>
+                        <br>
+                        <a href="#" class="file-link">> view_source_code</a>
+                    </div>
+                </div>
+
+                <div class="terminal-row">
+                    <div class="cmd-line">
+                        <span class="prompt-user">4nkit@dev:~/projects/devops_cli $</span>
+                        <span class="cmd">python3 main.py --help</span>
+                    </div>
+                    <div class="cmd-output">
+                        <h3 class="highlight-white">DevOps CLI Tool</h3>
+                        <p>Automation CLI to scaffold projects and manage local docker containers efficiently.</p>
+                        <div class="tech-stack-inline">
+                            [ Python ] [ Docker ] [ Click ]
+                        </div>
+                        <br>
+                        <a href="#" class="file-link">> view_source_code</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <div class="section-header">
+                <h2 class="subtle-glitch"><span class="prompt">></span> ./send_packet.sh</h2>
+            </div>
+            <div class="terminal-block">
+                <form id="contact-form">
+                    <div class="input-group">
+                        <label>DESTINATION_NAME = </label>
+                        <input type="text" id="name" placeholder='"Input Name"' required>
+                    </div>
+                    <div class="input-group">
+                        <label>REPLY_TO_EMAIL = </label>
+                        <input type="email" id="email" placeholder='"Input Email"' required>
+                    </div>
+                    <div class="input-group">
+                        <label>PAYLOAD_MESSAGE = </label>
+                        <textarea id="message" rows="5" placeholder='"Input Message content..."' required></textarea>
+                    </div>
+                    <div class="form-controls">
+                        <button type="submit" class="terminal-btn">[ INITIATE_SEND ]</button>
+                        <button type="button" id="copy-btn" class="terminal-btn outline">[ COPY_STDOUT ]</button>
+                    </div>
+                </form>
+                <div id="status-msg" class="hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="system-footer hidden-initially">
+        <div class="status-left">
+            <div class="status-mode">NORMAL</div>
+            <div class="status-item"><span class="icon">⑂</span> master</div>
+            <div class="status-item">4nkit.dev</div>
+        </div>
+        <div class="status-right">
+            <div class="status-item">utf-8</div>
+            <div class="status-item">mem: 45%</div>
+            <div class="status-item">ln 42, col 10</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
