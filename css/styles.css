@@ -97,6 +97,18 @@ body {
     display: none;
 }
 
+/* === Scroll Reveal Animation === */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* === Typography === */
 h1,
 h2,
@@ -166,6 +178,14 @@ h3 {
 
 .blink-cursor {
     animation: blink 1s step-end infinite;
+}
+
+.mobile-toggle {
+    display: none;
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    color: var(--accent);
+    cursor: pointer;
 }
 
 #nav-list {
@@ -255,8 +275,26 @@ h3 {
     animation: blink 1s step-end infinite;
 }
 
-.btn-group {
+/* UPDATED HERO ACTIONS FOR FADE IN */
+.hero-actions {
     margin-top: 2rem;
+
+    /* Initial State: Invisible and slightly lower */
+    opacity: 0;
+    transform: translateY(20px);
+
+    /* Smooth Transition */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.hero-actions.visible {
+    /* Final State: Visible and original position */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-group {
+    margin-top: 1rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -290,17 +328,15 @@ h3 {
     color: black;
 }
 
-/* === Layout Blocks (Fixed: Removed Green Gradient) === */
+/* === Layout Blocks === */
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 5rem 1.5rem;
 }
 
-/* Changed to pure transparent/black, just border */
 .terminal-block {
     background: #050505;
-    /* Was var(--accent-dim) */
     border: 1px solid #333;
     border-left: 3px solid var(--accent);
     padding: 1.5rem;
@@ -337,6 +373,27 @@ h3 {
     padding: 5px 0;
     font-size: 0.9rem;
     text-align: left;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    color: black;
+    background: var(--accent);
+    padding: 0 5px;
 }
 
 /* === SKILLS === */
@@ -400,7 +457,7 @@ h3 {
     padding: 1.5rem;
 }
 
-/* === EXPERIENCE (Git Graph) === */
+/* === EXPERIENCE === */
 .git-graph {
     position: relative;
     padding-left: 20px;
@@ -526,7 +583,6 @@ h3 {
     color: black;
 }
 
-
 /* === CONTACT === */
 .input-group {
     margin-bottom: 1.5rem;
@@ -621,10 +677,6 @@ textarea:focus {
 @media (max-width: 768px) {
     .mobile-toggle {
         display: block;
-        color: var(--accent);
-        font-family: var(--font-head);
-        font-size: 1.4rem;
-        cursor: pointer;
     }
 
     #nav-list {
