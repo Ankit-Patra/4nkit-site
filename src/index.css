@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --bg-color: #000000;
   --terminal-bg: #050505;
   --accent: #39FF14;
@@ -6,8 +7,12 @@
   --white: #e0e0e0;
   --bright-white: #ffffff;
   --gray: #666666;
-  --font-body: 'Inconsolata', monospace;
-  --font-head: 'VT323', monospace;
+
+  /* FONTS: The Secret Service Look */
+  --font-body: 'Anonymous Pro', monospace;
+  --font-head: 'Anonymous Pro', monospace;
+
+  /* Sizing */
   --nav-height: 60px;
   --footer-height: 30px;
 }
