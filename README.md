@@ -1,16 +1,23 @@
-# React + Vite
+# 4nkit.dev // Terminal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Status](https://img.shields.io/badge/status-online-39FF14?style=for-the-badge&logo=linux&logoColor=black)
+![Tech Stack](https://img.shields.io/badge/stack-HTML_CSS_JS-blue?style=for-the-badge)
 
-Currently, two official plugins are available:
+A retro, terminal-themed personal portfolio website designed to look like a Linux command-line interface. Built with pure HTML, CSS, and JavaScript—no frameworks, just raw code.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡ Features
 
-## React Compiler
+- **📺 CRT Aesthetic:** Scanlines, vignette, and neon glow effects for that 90s monitor feel.
+- **⌨️ Typewriter Effect:** Realistic typing animation for the hero section with a blinking cursor.
+- **🕵️ Scroll Spy:** Navigation links automatically highlight based on the section currently in the center of the viewport.
+- **🚀 Boot Sequence:** A fake BIOS boot-up screen plays on the first load.
+- **📱 Responsive:** Fully functional "Mobile Terminal" layout for smaller screens.
+- **📧 Functional Contact:** - `INITIATE_SEND` opens your default mail client.
+  - `COPY_STDOUT` copies the message buffer to your clipboard.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Installation & Setup
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/Ankit-Patra/4nkit-site.git](https://github.com/Ankit-Patra/4nkit-site.git)
+   cd 4nkit-site
