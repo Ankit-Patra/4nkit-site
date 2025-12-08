@@ -33,13 +33,54 @@ A retro-styled, highly interactive developer portfolio that simulates a Linux te
 
 The project has been migrated to a clean, component-based structure:
 
-```text
-src/
-├── components/
-│   ├── layout/       # BootScreen, Navbar, Footer
-│   ├── sections/     # Individual page sections (Hero, About, Projects...)
-│   └── ui/           # Reusable UI bits (SectionHeader, Buttons)
-├── data/
-│   └── constants.js  # 📝 EDIT THIS FILE to update content!
-├── hooks/            # Animation logic (Scroll detection, Typing)
-└── App.jsx           # Main layout orchestrator
+    src/
+    ├── components/
+    │   ├── layout/       # BootScreen, Navbar, Footer
+    │   ├── sections/     # Individual page sections (Hero, About, Projects...)
+    │   └── ui/           # Reusable UI bits (SectionHeader, Buttons)
+    ├── data/
+    │   └── constants.js  # 📝 EDIT THIS FILE to update content!
+    ├── hooks/            # Animation logic (Scroll detection, Typing)
+    └── App.jsx           # Main layout orchestrator
+
+## 🚀 Local Initialization
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Ankit-Patra/4nkit-site.git](https://github.com/Ankit-Patra/4nkit-site.git)
+    cd 4nkit-site
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start development server:**
+    ```bash
+    npm run dev
+    ```
+
+## 📦 Deployment (GitHub Pages)
+
+This project uses `gh-pages` for deployment. The `main` branch holds the source code, while the `gh-pages` branch serves the built assets.
+
+1.  **Build and Deploy:**
+    ```bash
+    npm run deploy
+    ```
+    *(This runs `vite build` followed by `gh-pages -d dist`)*
+
+2.  **CNAME Configuration:**
+    The `public/CNAME` file ensures the custom domain `4nkit.dev` persists after every deployment.
+
+---
+
+### 📬 Contact Protocol
+
+* **User:** Ankit Patra
+* **Email:** ankitpatra0123@gmail.com
+* **LinkedIn:** [linkedin.com/in/ankitpatra123](https://www.linkedin.com/in/ankitpatra123)
+
+---
+*© 2025 4nkit.dev | System Status: Normal*
