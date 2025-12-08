@@ -1,23 +1,45 @@
-# 4nkit.dev // Terminal Portfolio
+# 4nkit.dev // TERMINAL PORTFOLIO
 
-![Project Status](https://img.shields.io/badge/status-online-39FF14?style=for-the-badge&logo=linux&logoColor=black)
-![Tech Stack](https://img.shields.io/badge/stack-HTML_CSS_JS-blue?style=for-the-badge)
+> "I prefer clean code over complex abstractions and terminal commands over GUIs."
 
-A retro, terminal-themed personal portfolio website designed to look like a Linux command-line interface. Built with pure HTML, CSS, and JavaScript—no frameworks, just raw code.
+![Status](https://img.shields.io/badge/SYSTEM-ONLINE-39FF14?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+A retro-styled, highly interactive developer portfolio that simulates a Linux terminal environment. Recently refactored from vanilla HTML/JS to a modular **React + Vite** architecture.
+
+## 🟢 Live System
+**Access Terminal:** [https://4nkit.dev](https://4nkit.dev)
+
+---
 
 ## ⚡ Features
 
-- **📺 CRT Aesthetic:** Scanlines, vignette, and neon glow effects for that 90s monitor feel.
-- **⌨️ Typewriter Effect:** Realistic typing animation for the hero section with a blinking cursor.
-- **🕵️ Scroll Spy:** Navigation links automatically highlight based on the section currently in the center of the viewport.
-- **🚀 Boot Sequence:** A fake BIOS boot-up screen plays on the first load.
-- **📱 Responsive:** Fully functional "Mobile Terminal" layout for smaller screens.
-- **📧 Functional Contact:** - `INITIATE_SEND` opens your default mail client.
-  - `COPY_STDOUT` copies the message buffer to your clipboard.
+* **🖥️ Authentic CRT Experience:** Custom scanlines, vignette, and text-shadow glow effects.
+* **🚀 BIOS Boot Sequence:** Simulated startup logs and kernel loading animations.
+* **⌨️ Typewriter Engine:** Custom hook (`useTypewriter`) for realistic text output.
+* **🖱️ Scroll Spy Navigation:** Bidirectional fade animations—elements slide *up* when scrolling down, and *down* when scrolling up.
+* **📂 Modular Architecture:** All data (Skills, History, Projects) is separated into JSON constants for easy updating.
+* **📱 Responsive Design:** Fully functional terminal UI on mobile devices.
 
-## 🛠️ Installation & Setup
+## 🛠️ Tech Stack
 
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/Ankit-Patra/4nkit-site.git](https://github.com/Ankit-Patra/4nkit-site.git)
-   cd 4nkit-site
+* **Core:** React.js (v18), Vite
+* **Styling:** Pure CSS3 (Variables, Keyframes, Flexbox/Grid)
+* **Deployment:** GitHub Pages
+* **Hooks:** Custom `useScrollSpy` & `useTypewriter`
+
+## 📂 Project Structure
+
+The project has been migrated to a clean, component-based structure:
+
+```text
+src/
+├── components/
+│   ├── layout/       # BootScreen, Navbar, Footer
+│   ├── sections/     # Individual page sections (Hero, About, Projects...)
+│   └── ui/           # Reusable UI bits (SectionHeader, Buttons)
+├── data/
+│   └── constants.js  # 📝 EDIT THIS FILE to update content!
+├── hooks/            # Animation logic (Scroll detection, Typing)
+└── App.jsx           # Main layout orchestrator
