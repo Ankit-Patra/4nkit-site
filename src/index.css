@@ -21,6 +21,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  touch-action: manipulation;
 }
 
 html {
@@ -264,7 +265,7 @@ h3 {
   min-height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .console-line {
@@ -621,6 +622,7 @@ textarea:focus {
 .form-controls {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .system-footer {
@@ -683,6 +685,12 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
+  input,
+    textarea,
+    select {
+      /* iOS zooms in if font size is < 16px. This forces it to 16px on mobile. */
+      font-size: 16px !important;
+    }
   .mobile-toggle {
     display: block;
   }
